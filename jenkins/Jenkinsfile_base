@@ -21,9 +21,6 @@ pipeline {
                 }
             }
         }
-        stage('SonarQuebe analysis') {
-            sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-        }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
